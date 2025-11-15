@@ -1,12 +1,209 @@
-<html>
-      <head>
-<meta charset="UTF-8">
-<tittle>
-my start</tittle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .grid-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .grid-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .grid-content {
+            padding: 20px;
+        }
+        
+        .grid-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .grid-description {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>
-      hshjsskahagaak</h1>
-       
-        </body>
-</htlm>
+    <div class="container">
+        <header>
+            <h1>Image Grid Gallery</h1>
+            <p class="subtitle">A collection of beautiful images with descriptions</p>
+        </header>
+        
+        <div class="grid">
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mountain Landscape" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Mountain Landscape</h3>
+                    <p class="grid-description">Majestic mountains reaching for the sky, with snow-capped peaks and lush green valleys below.</p>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Beach Sunset" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Beach Sunset</h3>
+                    <p class="grid-description">A breathtaking sunset over the ocean, with golden hues reflecting on the calm waters.</p>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Forest Path" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Forest Path</h3>
+                    <p class="grid-description">A serene path winding through a dense forest, with sunlight filtering through the canopy.</p>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="City Skyline" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">City Skyline</h3>
+                    <p class="grid-description">The impressive skyline of a modern city, with towering skyscrapers against the evening sky.</p>
+                </div>
+            </div>
+            
+            <!-- Item 5 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Northern Lights" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Northern Lights</h3>
+                    <p class="grid-description">The magical aurora borealis dancing across the night sky in vibrant shades of green.</p>
+                </div>
+            </div>
+            
+            <!-- Item 6 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mountain Lake" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Mountain Lake</h3>
+                    <p class="grid-description">A crystal-clear alpine lake perfectly reflecting the surrounding mountain peaks.</p>
+                </div>
+            </div>
+            
+            <!-- Item 7 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Desert Dunes" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Desert Dunes</h3>
+                    <p class="grid-description">Vast sand dunes creating mesmerizing patterns under the golden desert sun.</p>
+                </div>
+            </div>
+            
+            <!-- Item 8 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Waterfall" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Waterfall</h3>
+                    <p class="grid-description">A powerful waterfall cascading down rocky cliffs into a misty pool below.</p>
+                </div>
+            </div>
+            
+            <!-- Item 9 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Autumn Forest" class="grid-img">
+                <div class="grid-content">
+                    <h3 class="grid-title">Autumn Forest</h3>
+                    <p class="grid-description">A vibrant forest in autumn, with trees displaying brilliant shades of red, orange, and yellow.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Image Grid Gallery &copy; 2023</p>
+        </footer>
+    </div>
+</body>
+      </html>
